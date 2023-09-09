@@ -2,7 +2,7 @@
 trap "exit" INT
 
 if [ ! -d "amxmodx" ]; then
-  git clone --recursive https://github.com/alliedmodders/amxmodx.git
+  git clone --recursive https://github.com/pierow/amxmodx-ns.git
 fi
 
 if [ ! -d "amxmodx/build_deps" ]; then
