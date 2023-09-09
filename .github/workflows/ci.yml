@@ -5,11 +5,13 @@ on:
     branches:
      - master
      - 1.9-dev
+     - 1.9-buildfix
      - amx1.82-compatibility
   pull_request:
     branches:
      - master
      - 1.9-dev
+     - 1.9-buildfix
      - amx1.82-compatibility
 jobs:
   test:
