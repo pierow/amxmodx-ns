@@ -6,13 +6,13 @@ on:
      - master
      - 1.9-dev
      - 1.9-buildfix
-     - amx1.82-compatibility
+     - 1.82-compat-CI
   pull_request:
     branches:
      - master
      - 1.9-dev
      - 1.9-buildfix
-     - amx1.82-compatibility
+     - 1.82-compat-CI
 jobs:
   test:
     strategy:
