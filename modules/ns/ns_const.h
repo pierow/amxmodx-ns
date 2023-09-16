@@ -7,16 +7,13 @@
 // Additional exceptions apply. For full license details, see LICENSE.txt or visit:
 //     https://alliedmods.net/amxmodx-license
 
-//
-// Natural Selection Module
-//
 
 #ifndef NS_CONST_H
 #define NS_CONST_H
 
 
 
-// Offsets (used in NPData.cpp)
+ // Offsets (used in NPData.cpp)
 
 #define NEED_TO_FIND 0
 
@@ -133,8 +130,9 @@
 #define OFFSET_WIN_BASE				"?SUB_CallUseToggle@CBaseEntity@@QAEXXZ"
 #define OFFSET_LIN_BASE				"_init"
 
+#define OFFSET_WIN_MEMBERFUNCSTART	0x00000E20	//old 0x00001000  // The location of CBaseEntity::SUB_CallUseToggle
 #define OFFSET_LIN_MEMBERFUNCSTART	0x000A1000	//0x000EDBE8  // The location of _init in the binary //located at "; _init"
-#define OFFSET_WIN_MEMBERFUNCSTART	0x00001A40	//old 0x00001000  // The location of CBaseEntity::SUB_CallUseToggle
+
 
 // NOTE: These addresses are raw offsets, not including the
 //       base addresses!  These are the exact offsets that 
@@ -143,21 +141,21 @@
 
 
 // Recycle:   void AvHBaseBuildable::StartRecycle(void)
-#define OFFSET_WIN_MEMBER_RECYCLE				MAKE_MEMBER_OFFSET(0x0006FB40)	//old MAKE_MEMBER_OFFSET(0x00053950)
-#define OFFSET_LIN_MEMBER_RECYCLE				MAKE_MEMBER_OFFSET(0x00131860)	//old MAKE_MEMBER_OFFSET(0x00180800) //AvHBaseBuildable::StartRecycle(AvHBaseBuildable *__hidden this)
+#define OFFSET_WIN_MEMBER_RECYCLE				MAKE_MEMBER_OFFSET(0x0006E670)	//.text:1006F270 //old MAKE_MEMBER_OFFSET(0x00053950)
+#define OFFSET_LIN_MEMBER_RECYCLE				MAKE_MEMBER_OFFSET(0x00136CF0)	//old MAKE_MEMBER_OFFSET(0x00180800) //AvHBaseBuildable::StartRecycle(AvHBaseBuildable *__hidden this)
 
 
 // Weldable:  void AvHWeldable::AddWeldTime(float Time)
-#define OFFSET_WIN_MEMBER_TRIGGER_WELDABLE		MAKE_MEMBER_OFFSET(0x000D65A0)	//old MAKE_MEMBER_OFFSET(0x000A0E20)
-#define OFFSET_LIN_MEMBER_TRIGGER_WELDABLE		MAKE_MEMBER_OFFSET(0x001D55D0)	//old MAKE_MEMBER_OFFSET(0x00232840)
+#define OFFSET_WIN_MEMBER_TRIGGER_WELDABLE		MAKE_MEMBER_OFFSET(0x000D3AA0)	//old MAKE_MEMBER_OFFSET(0x000A0E20) //actually AvHWeldable::AddBuildTime ???
+#define OFFSET_LIN_MEMBER_TRIGGER_WELDABLE		MAKE_MEMBER_OFFSET(0x001DAE40)	//old MAKE_MEMBER_OFFSET(0x00232840)
 
 // Research:  bool AvHTechTree::SetResearchDone(AvHMessageID inMessageID, bool inState)
-#define OFFSET_WIN_MEMBER_SET_RESEARCH_DONE		MAKE_MEMBER_OFFSET(0x000D2EB0)	//old MAKE_MEMBER_OFFSET(0x0009EC40)
-#define OFFSET_LIN_MEMBER_SET_RESEARCH_DONE		MAKE_MEMBER_OFFSET(0x001CFD90)	//old MAKE_MEMBER_OFFSET(0x0022E740)
+#define OFFSET_WIN_MEMBER_SET_RESEARCH_DONE		MAKE_MEMBER_OFFSET(0x000D1290)	//old MAKE_MEMBER_OFFSET(0x0009EC40)
+#define OFFSET_LIN_MEMBER_SET_RESEARCH_DONE		MAKE_MEMBER_OFFSET(0x001D54E0)	//old MAKE_MEMBER_OFFSET(0x0022E740)
 
 // Game Rules: AvHGameRules *GetGameRules(void)
-#define OFFSET_WIN_GETGAMERULES					MAKE_MEMBER_OFFSET(0x000847F0)	//old MAKE_MEMBER_OFFSET(0x00068000)
-#define OFFSET_LIN_GETGAMERULES					MAKE_MEMBER_OFFSET(0x00157A60)	//old MAKE_MEMBER_OFFSET(0x0019F930)
+#define OFFSET_WIN_GETGAMERULES					MAKE_MEMBER_OFFSET(0x00083190)	//.text is 10083D90 //old MAKE_MEMBER_OFFSET(0x00068000)
+#define OFFSET_LIN_GETGAMERULES					MAKE_MEMBER_OFFSET(0x0015D1C0)	//old MAKE_MEMBER_OFFSET(0x0019F930)
 
 //2023 - These were/are for windows but idk if linux is different.
 // Offset into the gamerules pointer to the TeamA / TeamB class
