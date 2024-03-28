@@ -18,14 +18,14 @@
 #define NEED_TO_FIND 0
 
 
-#define OFFSET_WIN_RESOURCES		1816
-#define OFFSET_LIN_RESOURCES		1836
+#define OFFSET_WIN_RESOURCES		1824
+#define OFFSET_LIN_RESOURCES		1844
 
-#define OFFSET_WIN_WEAPDMG			408
-#define OFFSET_LIN_WEAPDMG			424
+#define OFFSET_WIN_WEAPDMG			412
+#define OFFSET_LIN_WEAPDMG			428
 
-#define OFFSET_WIN_WEAPRANGE		404
-#define OFFSET_LIN_WEAPRANGE		420
+#define OFFSET_WIN_WEAPRANGE		408
+#define OFFSET_LIN_WEAPRANGE		424
 
 #define OFFSET_WIN_WEAPCLIP			364
 #define OFFSET_LIN_WEAPCLIP			380
@@ -40,14 +40,14 @@
 #define	OFFSET_WIN_HIVE_TRAIT		512		//488
 #define	OFFSET_LIN_HIVE_TRAIT		528		//504
 
-#define	OFFSET_WIN_SCORE			6636	//6588
-#define	OFFSET_LIN_SCORE			6736	//6608
+#define	OFFSET_WIN_SCORE			6648	//6588
+#define	OFFSET_LIN_SCORE			6748	//6608
 
-#define	OFFSET_WIN_EXP				6568	//6512
-#define	OFFSET_LIN_EXP				6636	//6532
+#define	OFFSET_WIN_EXP				6580	//6512
+#define	OFFSET_LIN_EXP				6648	//6532
 
-#define	OFFSET_WIN_POINTS			6576	//6520
-#define	OFFSET_LIN_POINTS			6644	//6540
+#define	OFFSET_WIN_POINTS			6588	//6520
+#define	OFFSET_LIN_POINTS			6656	//6540
 
 #define	OFFSET_WIN_AMMO_LMG			1116
 #define	OFFSET_LIN_AMMO_LMG			1136
@@ -113,14 +113,14 @@
 #define OFFSET_LIN_GAMEPLAY_TEAMB	0x68	//could be 0x58		//__ZNK7AvHTeam13GetTeamNumberEv ; AvHTeam::GetTeamNumber(void)
 
 
-#define OFFSET_WIN_UPGRADES_BOUGHT	0x19B8	//old 0x1980	//mPurchasedCombatUpgrades or under AvHPlayer::GetPurchasedCombatUpgrades(AvHPlayer *this) in disassembler
-#define OFFSET_LIN_UPGRADES_BOUGHT	0x19FC	//old 0x1994	 //new 19FC 6652
+#define OFFSET_WIN_UPGRADES_BOUGHT	0x19C4	//old 0x1980	//mPurchasedCombatUpgrades or under AvHPlayer::GetPurchasedCombatUpgrades(AvHPlayer *this) in disassembler
+#define OFFSET_LIN_UPGRADES_BOUGHT	0x1A08	//old 0x1994	 //new 19FC 6652
 
-#define OFFSET_WIN_UPGRADES_ACTIVE	0x19C4	//old 0x198C //mGiveCombatUpgrades
-#define OFFSET_LIN_UPGRADES_ACTIVE	0x1A08	//old 0x19A0 //new offset of mGiveCombatUpgrades is 6664
+#define OFFSET_WIN_UPGRADES_ACTIVE	0x19D0	//old 0x198C //mGiveCombatUpgrades
+#define OFFSET_LIN_UPGRADES_ACTIVE	0x1A14	//old 0x19A0 //new offset of mGiveCombatUpgrades is 6664
 
-#define OFFSET_WIN_COMBAT_TECHTREE	0x19D0	//old 0x1998 //in AvHPlayer::GetCombatNodes(AvHPlayer *this)
-#define OFFSET_LIN_COMBAT_TECHTREE	0x1A14	//old 0x19AC //new offset of mCombatNodes is 6676
+#define OFFSET_WIN_COMBAT_TECHTREE	0x19DC	//old 0x1998 //in AvHPlayer::GetCombatNodes(AvHPlayer *this)
+#define OFFSET_LIN_COMBAT_TECHTREE	0x1A20	//old 0x19AC //new offset of mCombatNodes is 6676
 
 
 
@@ -130,8 +130,8 @@
 #define OFFSET_WIN_BASE				"?SUB_CallUseToggle@CBaseEntity@@QAEXXZ"
 #define OFFSET_LIN_BASE				"_init"
 
-#define OFFSET_WIN_MEMBERFUNCSTART	0x00000E20	//old 0x00001000  // The location of CBaseEntity::SUB_CallUseToggle
-#define OFFSET_LIN_MEMBERFUNCSTART	0x000A1000	//0x000EDBE8  // The location of _init in the binary //located at "; _init"
+#define OFFSET_WIN_MEMBERFUNCSTART	0x0000DEC0	//old 0x00001000  // The location of CBaseEntity::SUB_CallUseToggle
+#define OFFSET_LIN_MEMBERFUNCSTART	0x000BA000	//0x000EDBE8  // The location of _init in the binary //located at "; _init"
 
 
 // NOTE: These addresses are raw offsets, not including the
@@ -141,21 +141,21 @@
 
 
 // Recycle:   void AvHBaseBuildable::StartRecycle(void)
-#define OFFSET_WIN_MEMBER_RECYCLE				MAKE_MEMBER_OFFSET(0x0006E670)	//.text:1006F270 //old MAKE_MEMBER_OFFSET(0x00053950)
-#define OFFSET_LIN_MEMBER_RECYCLE				MAKE_MEMBER_OFFSET(0x00136CF0)	//old MAKE_MEMBER_OFFSET(0x00180800) //AvHBaseBuildable::StartRecycle(AvHBaseBuildable *__hidden this)
+#define OFFSET_WIN_MEMBER_RECYCLE				MAKE_MEMBER_OFFSET(0x000E7EE0)	//.text:1006F270 //old MAKE_MEMBER_OFFSET(0x00053950)
+#define OFFSET_LIN_MEMBER_RECYCLE				MAKE_MEMBER_OFFSET(0x001FA2D0)	//old MAKE_MEMBER_OFFSET(0x00180800) //AvHBaseBuildable::StartRecycle(AvHBaseBuildable *__hidden this)
 
 
 // Weldable:  void AvHWeldable::AddWeldTime(float Time)
-#define OFFSET_WIN_MEMBER_TRIGGER_WELDABLE		MAKE_MEMBER_OFFSET(0x000D3AA0)	//old MAKE_MEMBER_OFFSET(0x000A0E20) //actually AvHWeldable::AddBuildTime ???
-#define OFFSET_LIN_MEMBER_TRIGGER_WELDABLE		MAKE_MEMBER_OFFSET(0x001DAE40)	//old MAKE_MEMBER_OFFSET(0x00232840)
+#define OFFSET_WIN_MEMBER_TRIGGER_WELDABLE		MAKE_MEMBER_OFFSET(0x0014D410)	//old MAKE_MEMBER_OFFSET(0x000A0E20) //actually AvHWeldable::AddBuildTime ???
+#define OFFSET_LIN_MEMBER_TRIGGER_WELDABLE		MAKE_MEMBER_OFFSET(0x0029EE60)	//old MAKE_MEMBER_OFFSET(0x00232840)
 
 // Research:  bool AvHTechTree::SetResearchDone(AvHMessageID inMessageID, bool inState)
-#define OFFSET_WIN_MEMBER_SET_RESEARCH_DONE		MAKE_MEMBER_OFFSET(0x000D1290)	//old MAKE_MEMBER_OFFSET(0x0009EC40)
-#define OFFSET_LIN_MEMBER_SET_RESEARCH_DONE		MAKE_MEMBER_OFFSET(0x001D54E0)	//old MAKE_MEMBER_OFFSET(0x0022E740)
+#define OFFSET_WIN_MEMBER_SET_RESEARCH_DONE		MAKE_MEMBER_OFFSET(0x0014AC60)	//old MAKE_MEMBER_OFFSET(0x0009EC40)
+#define OFFSET_LIN_MEMBER_SET_RESEARCH_DONE		MAKE_MEMBER_OFFSET(0x002992C0)	//old MAKE_MEMBER_OFFSET(0x0022E740)
 
 // Game Rules: AvHGameRules *GetGameRules(void)
-#define OFFSET_WIN_GETGAMERULES					MAKE_MEMBER_OFFSET(0x00083190)	//.text is 10083D90 //old MAKE_MEMBER_OFFSET(0x00068000)
-#define OFFSET_LIN_GETGAMERULES					MAKE_MEMBER_OFFSET(0x0015D1C0)	//old MAKE_MEMBER_OFFSET(0x0019F930)
+#define OFFSET_WIN_GETGAMERULES					MAKE_MEMBER_OFFSET(0x000FCAC0)	//.text is 10083D90 //old MAKE_MEMBER_OFFSET(0x00068000)
+#define OFFSET_LIN_GETGAMERULES					MAKE_MEMBER_OFFSET(0x00220E50)	//old MAKE_MEMBER_OFFSET(0x0019F930)
 
 //2023 - These were/are for windows but idk if linux is different.
 // Offset into the gamerules pointer to the TeamA / TeamB class
